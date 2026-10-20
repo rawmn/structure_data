@@ -19,11 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source Files\Laboratory_Work2.cpp" />
+    <ClCompile Include="..\..\Lab 1\Laboratory_Work1\Source Files\DynamicArray.cpp" />
+    <ClCompile Include="Source Files\Benchmark.cpp" />
     <ClCompile Include="Source Files\List.cpp" />
     <ClCompile Include="Source Files\Node.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Lab 1\Laboratory_Work1\Header Files\DynamicArray.h" />
     <ClInclude Include="Header Files\List.h" />
     <ClInclude Include="Header Files\Node.h" />
   </ItemGroup>
@@ -126,7 +128,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)Header Files</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>F:\Tusur\Структуры Данных\Laboratory_Work2\Lab 1\Laboratory_Work1\Header Files;$(ProjectDir)Header Files</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
