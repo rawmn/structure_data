@@ -97,8 +97,6 @@ bool List::RemoveNodeByIndex(int index)
         return false;
     }
 
-    Node* toDelete = GetNodeByIndex(index);
-
     if (_size == 1)
     {
         _head = nullptr;
@@ -106,23 +104,28 @@ bool List::RemoveNodeByIndex(int index)
     }
     else if (index == 0)
     {
-        _head = toDelete->GetNextNode();
+        Node* current = _head;
+        _head = _head->GetNextNode();
         _head->SetPreviousNode(nullptr);
+        delete current;
     }
     else if (index == _size - 1)
     {
-        _tail = toDelete->GetPreviousNode();
+        Node* current = _tail;
+        _tail = _tail->GetPreviousNode();
         _tail->SetNextNode(nullptr);
+        delete current;
     }
     else
     {
+        Node* toDelete = GetNodeByIndex(index);
         Node* prev = toDelete->GetPreviousNode();
         Node* next = toDelete->GetNextNode();
         prev->SetNextNode(next);
         next->SetPreviousNode(prev);
+        delete toDelete;
     }
 
-    delete toDelete;
     _size--;
     return true;
 }
